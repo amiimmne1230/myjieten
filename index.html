@@ -1,13 +1,5 @@
 ﻿<!DOCTYPE html> <!--這是 文件類型 (DOCTYPE)是 html-->
 
-
-<!-- 
-git init     放空
-git status   茶狀態
-git add .     添加
-git commit -m "first commit"   重整
-git push -f origin main   更新  -f 是強制更新
--->
 <html lang="zh-Hant-TW">
 
 <head> <!-- 類似所有設定中心-->
@@ -18,13 +10,14 @@ git push -f origin main   更新  -f 是強制更新
     <style>
     h3
     {
-    display:block;
-    font-size: 20px;
-    margin-block-start: 6px;
-    margin-block-end: 12px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight:bold;
+        display:block;
+        color:white;
+        font-size: 21px;
+        margin-block-start: 8px;
+        margin-block-end: 16px;
+        margin-inline-start: 2px;
+        margin-inline-end: 2px;
+        font-weight:bold;
     }
 
     .alldivuse
@@ -130,7 +123,7 @@ git push -f origin main   更新  -f 是強制更新
         font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 ">
 <div class="alldivuse">
-<h3 style="color:white;">目錄:</h3>
+<h3 >目錄</h3>
 <button class="mainbut" onclick="goindex(0)"> 櫛田桔梗 </button>
 <button class="mainbut" onclick="goindex(1); " > 物品欄 </button>
 <button class="mainbut" onclick=""> 聯絡人與差事 </button>
@@ -145,7 +138,7 @@ git push -f origin main   更新  -f 是強制更新
 
 <div id="goindex0" style="display:;">
 <div class="alldivuse">
-<h3 style="color:white;">狀態: <b id="statname" style="color:lightgreen;"><script src="playerStat.js"></script></b></h3>
+<h3 >狀態  <b id="statname" style="color:lightgreen;"><script src="playerStat.js"></script></b></h3>
 </div>
 
 
@@ -229,7 +222,7 @@ git push -f origin main   更新  -f 是強制更新
 
 
 <div class="alldivuse">
-<h3 style="color:white;">地點:</h3>
+<h3 >地點</h3>
 <button class="mainbut" id="area0" disabled> 宿舍 </button>
 <button class="mainbut" id="area1" > 教室 </button>
 <button class="mainbut" id="area2" > 食堂 </button>
@@ -241,7 +234,7 @@ git push -f origin main   更新  -f 是強制更新
 
 
 <div class="alldivuse">
-<h3 style="color:white;">行動:</h3>
+<h3 >行動</h3>
 
 <div id="actiondiv0" style="display:">
 <button class="mainbut" id="button0"> 自習 </button>
@@ -287,9 +280,19 @@ git push -f origin main   更新  -f 是強制更新
 
 
 <div id="goindex1" style="display:none; ">
+
+
 <div class="alldivuse">
-<h3 style="color:white; font-weight:bold; font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
-物品欄:</h3>
+<h3 >操作 - </h3>
+    <button class="mainbut" onclick="">詳細資訊</button>
+    <button class="mainbut" onclick="">使用</button>
+</div>
+
+
+
+
+<div class="alldivuse">
+<h3 >物品欄</h3>
 <table id="table1">
 
 <tr >
@@ -299,10 +302,10 @@ git push -f origin main   更新  -f 是強制更新
     <th class="th">差事任務</th>
 </tr>
 <tr>
-    <td class="td">炒麵麵包 X <b id="item00"><script src="playerStat.js"></script></b></td>
+    <td class="td"><button class="mainbut" onclick="">炒麵麵包 X <b id="item00"><script src="playerStat.js"></script></b></button></td>
     <td class="td"></td>
     <td class="td"></td>
-    <td class="td">山內的聯絡方式 X <b id="item01"><script src="playerStat.js"></script></b></td>
+    <td class="td"><button class="mainbut" onclick="">山內的聯絡方式 X <b id="item01"><script src="playerStat.js"></script></b></button></td>
 </tr>
 <tr >
     <td class="td"></td>
@@ -338,16 +341,17 @@ git push -f origin main   更新  -f 是強制更新
 
 
 <div style="
-    padding:2%;
+    padding:1%;
     text-align:center;
     font-weight:bold;
     font-size:12px;
-    color:lightgray;
+    color:white;
     font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     ">
-版本 v<b>1.0.1</b><p>
-am 製作,此角色來自 歡迎來到實力至上主義教室 作品,本站內容涉及劇透 請斟酌閱覽.
-</p>
+    am 製作 版本 v1.0.1
+    <p>
+    此角色來自 '歡迎來到實力至上主義教室作品' 本站內容涉及該作品些許劇透  請斟酌閱覽。
+    </p>
 </div>
 </div><!-- 109 的縮排-->
 </body>
