@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html> <!--這是 文件類型 (DOCTYPE)是 html-->
+
+<html lang="zh-Hant-TW">
+<head> <!-- 類似所有設定中心-->
+    <meta charset="utf-8" />    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>我的櫛田</title>
+    <link rel="icon" href="icnon.png">
+    
+
+    <style>
+    h3
+    {
+    display:block;
+    font-size: 20px;
+    margin-block-start: 6px;
+    margin-block-end: 12px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight:bold;
+    }
+
+    .alldivuse
+    {    
+        margin-bottom:1%;
+        padding:1.618%;
+        border: 1px solid white;"
+        font-weight:bold;
+        font-size:18px;
+    }
+    .mainbut
+    {
+        border:none;    
+        padding: 9px 14px;
+        font-weight:bold;           
+        border-radius:6px;
+        transition-duration: 0.45s;
+        background-color:#F2F2F2;
+    }
+    .mainbut:hover
+    {
+        background-color:#38C786;
+        padding: 9px 14px;
+        font-weight:bold;
+        background-color:#38C786;
+        border-radius:6px;
+    }
+    .mainbut:disabled
+    {
+        padding: 9px 14px;
+        font-weight:bold;
+        border-radius:6px;
+        background-color:#E0E0E0;
+    }
+
+    img
+    {          
+        width:100%;
+        max-width:350px;
+    }
+    #table1
+    {
+        display: table;
+        box-sizing: border-box;
+        text-indent: initial;    
+        width: 100%;
+        font-size:20px;
+        text-align: left;
+    }
+    #tr1
+    {   
+        background-color:#d1f1e2;
+        padding:6px 10px;
+        text-align:left;
+        width:80px;
+        color:#410069;
+    }
+    #tr2
+    {
+        background-color:#97b399; 
+        padding:6px 10px;
+        text-align:left;
+        width:80px;
+        color:#410069;f;
+    }
+    
+    td
+    {
+        font-weight:bold;
+        padding:4px 8px;
+        text-align:left;
+        width:0%;
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+    
+    </style>
+
+</head>
+
+
+<body style="background-color:#FF7841;"> 
+<div style=
+"
+        margin: 12px auto;
+        max-width:760px;
+        min-width:400px;
+        width:92%;
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+">
+
+
+
+
+<div class="alldivuse">
+<h3 style="color:white;">目錄:</h3>
+<button class="mainbut" onclick="location.href='index.html'"> 櫛田桔梗 </button>
+<button class="mainbut" onclick="location.href='items.html'" > 物品欄 </button>
+<button class="mainbut" onclick=""> 聯絡人與差事 </button>
+<button class="mainbut" onclick=""> 期中考 </button>
+<button class="mainbut" onclick="" > 特殊考試 </button>
+
+</div>
+
+
+
+<div class="alldivuse">
+<table>
+<tr>
+    <td ><img src="indexthing/you1.jpg"/></td>
+    <td><img src="indexthing/info.png"/></td> 
+</tr>
+<tr style="text-align:left;">
+<td style="color:white;">狀態:<b id="statname" style="color:lightgreen;"><script src="playerStat.js"></script></b></td>
+</tr>
+</table>
+</div>
+
+
+
+
+
+
+<div class="alldivuse">
+<h3 style="color:white;">地點:</h3>
+<button class="mainbut" id="area0" disabled> 宿舍 </button>
+<button class="mainbut" id="area1" > 教室 </button>
+<button class="mainbut" id="area2" > 食堂 </button>
+<!--<button id="button" onclick=""> 工具間 </button>-->
+</div>
+
+
+
+
+
+<div class="alldivuse">
+<h3 style="color:white;">行動:</h3>
+
+<div id="actiondiv0" style="display:">
+<button class="mainbut" id="button0"> 自習 </button>
+<button class="mainbut" id="button1"> 自我鍛鍊 </button>
+<button class="mainbut" id="button2"> 睡覺 </button>
+</div><!--宿舍 -->
+
+<div id="actiondiv1" style="display:none">
+<button class="mainbut" id="button10"> 上課 </button>
+<button class="mainbut" id="button11"> 友好交流 </button>
+</div><!--教室 -->
+
+<div id="actiondiv2" style="display:none">
+<button class="mainbut" id="button20"> 買炒麵麵包 ( -20Pr ) </button>
+</div><!--食堂 -->
+
+</div>
+
+
+<div style="
+    border: 1px solid white;
+    margin-bottom:1%;
+    padding:2%;
+    ">
+    <p style="color:white;"><b id="actionwork">   
+    <script src="action.js"></script>
+<!--****************************************************************************************-->    
+    ...
+    </b></p>
+    <div style=
+    "
+        border: 1px solid white;
+    ">
+    <div id="actionload" style="background-color:white; width:0%; height:14px; transition-duration: 1s;">
+    <script src="actionload.js"></script>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="alldivuse">
+<h3 style="color:white; font-weight:bold; font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
+you
+</h3>
+<table id="table1">
+<tr id="tr2">
+    <td>學力:</td>
+    <td id="arcade"><script src="playerStat.js"></script></td>
+   
+
+     <td>Pr:</td>
+    <td id="coco"><script src="playerStat.js"></script></td>
+</tr>
+<tr id="tr1">
+    <td>身體能力:</td>
+    <td id="body"><script src="playerStat.js"></script></td>
+    
+    <td>體力:</td>
+    <td id="power"><script src="playerStat.js"></script></td>
+</tr>
+<tr id="tr2">
+    <td>思考力:</td>
+    <td id="thinck"><script src="playerStat.js"></script></td>
+    
+    <td>朋友:</td>
+    <td id="friends"><script src="playerStat.js"></script></td>
+</tr>
+<tr id="tr1">
+    <td>團體合作力:</td>
+    <td id="social"><script src="playerStat.js"></script></td>
+   
+    <td>身材Lv:</td>
+    <td id="boingboing"><script src="playerStat.js"></script></td>
+</tr>
+</table>
+</div>
+
+
+
+<div style="
+    margin-bottom:1%;
+    padding:2%;
+    text-align:center;
+    font-weight:bold;
+    font-size:12px;
+    color:lightgray;
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    ">
+am 製作 版本 v<b>1.0.1</b>
+</div>
+
+
+
+</div>
+</body>
+</html>
