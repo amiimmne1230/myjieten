@@ -5,3 +5,5 @@ git status   茶狀態
 git add .     添加
 git commit -m "first commit"   重整
 git push -u origin main   更新  -f 是強制更新
+
+按住 左SHIFT 和 insert 是貼上
