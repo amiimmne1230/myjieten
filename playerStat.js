@@ -11,7 +11,13 @@ var		cococo=50;//前
 var		boing=1;//身材
 
 
-var		item_bread=0;//炒麵麵包
+var		item = [
+0,//炒麵麵包
+0 //山內同學的聯絡方式
+]
+//物品
+
+
 var		stat =	document.getElementById("statname");//設定狀態
 
 
@@ -25,7 +31,10 @@ var state0 = document.getElementById("arcade"),
 	state5 = document.getElementById("social"),
 	state6 = document.getElementById("friends"),
 	state7 = document.getElementById("coco"),
-	state8 = document.getElementById("boingboing");
+	state8 = document.getElementById("boingboing"),
+	item00 = document.getElementById("item00")
+	item01 = document.getElementById("item01")
+	;
 	//必須依各個設定
 	
 	
@@ -51,4 +60,15 @@ function startallset()
 		state8.innerHTML = boing;
 		if(stat != null)
 		stat.innerHTML = playerstat[0];//一開始活者?
+		if(item00 != null)
+		item00.innerHTML = item[0];
+		if(item01 != null)
+		item01.innerHTML = item[1];
 }//一開始設定
+
+
+
+
+
+
+

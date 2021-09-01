@@ -1,9 +1,9 @@
 ﻿
 var searchhtml = document.getElementById("actionwork");
-//這個是尋找 html 的<> 名稱 
-
+//這個是尋找 html 的<> 名稱   尋找 行動文字
 var needcd = 0;
 //行動CD
+
 
 //Math.round(Math.max(1, Math.random()*5))
 //亂數設定
@@ -12,6 +12,31 @@ var intervalID;
 
 var bool_checkinaction = false;
 //BOOL 確認是否在行動中
+
+
+
+function goindex(ass)
+{
+	var goindex0 = document.getElementById("goindex0");//櫛田
+	var goindex1 = document.getElementById("goindex1");//物品
+	//var goindex2 = document.getElementById("goindex2");//
+
+
+	goindex0.style.display = "none";
+	goindex1.style.display = "none";
+	switch(ass)
+	{
+		case 0:
+		goindex0.style.display =	"";
+		break;	
+		case 1:
+		goindex1.style.display =	"";		
+		break;	
+	}
+}
+//目錄開關
+
+
 
 function iii(m,x)
 {
@@ -85,7 +110,8 @@ function disallbutppn(ass,ass2)
 				{
 					clearInterval(intervalID);
 					searchhtml.innerHTML = '買到炒麵麵包了   Pr ' + -20 + ' 點  體力消耗 ' + 2 +" 點";		
-					item_bread++;
+					item[0]++;
+					item00.innerHTML = item[0];
 					powerevent(-2);
 					prevent(-20);
 				}

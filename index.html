@@ -59,44 +59,59 @@ git push -f origin main   更新  -f 是強制更新
         border-radius:6px;
         background-color:#E0E0E0;
     }
-
-    img
-    {          
-        width:100%;
-        max-width:350px;
-    }
     #table1
     {
-        display: table;
-        box-sizing: border-box;
-        text-indent: initial;    
-        width: 100%;
-        font-size:20px;
-        text-align: left;
-    }
-    #tr1
-    {   
-        background-color:#d1f1e2;
-        padding:6px 10px;
+        border-spacing: 0px;
+        border: 1px solid white;
+        width: 100%;     
+        box-sizing:border-box;
+        text-indent: initial;
+        line-height: 1.4;
+        -webkit-text-size-adjust: 100%;
+        font-size:16px;
         text-align:left;
-        width:80px;
-        color:#410069;
+        display:table;
     }
-    #tr2
+    .th
+    {  
+        border-collapse: separate;
+        border:0.5px solid gray;
+        font-size:18px;
+        font-width:bold;
+        background-color:#272727; 
+        padding:4px 8px;
+        text-align:left;
+        width:30px;
+        color:white;
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+    .td
     {
-        background-color:#97b399; 
+        border-collapse: separate;
+        border:0.5px solid gray;
+        font-size:18px;
+        font-width:bold;
+        background-color:#FCFCFC;
         padding:6px 10px;
         text-align:left;
-        width:80px;
-        color:#410069;f;
+        width:51px;
+        color:black;
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     }
     
     td
     {
         font-weight:bold;
-        padding:4px 8px;
+        padding:4px 4px;
         text-align:left;
         width:0%;
+        font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    .itemtd
+    {
+        font-weight:bold;
+        text-align:left;
         font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     }
     
@@ -114,30 +129,96 @@ git push -f origin main   更新  -f 是強制更新
         width:92%;
         font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 ">
-
-
-
-
 <div class="alldivuse">
 <h3 style="color:white;">目錄:</h3>
-<button class="mainbut" onclick="location.href='index.html'"> 櫛田桔梗 </button>
-<button class="mainbut" onclick="location.href='items.html'" > 物品欄 </button>
+<button class="mainbut" onclick="goindex(0)"> 櫛田桔梗 </button>
+<button class="mainbut" onclick="goindex(1); " > 物品欄 </button>
 <button class="mainbut" onclick=""> 聯絡人與差事 </button>
 <button class="mainbut" onclick=""> 期中考 </button>
 <button class="mainbut" onclick="" > 特殊考試 </button>
-
 </div>
 
 
+<!--通知的區塊 -->
+
+
+
+<div id="goindex0" style="display:;">
+<div class="alldivuse">
+<h3 style="color:white;">狀態: <b id="statname" style="color:lightgreen;"><script src="playerStat.js"></script></b></h3>
+</div>
+
 
 <div class="alldivuse">
-<table>
+<table id="table1">
 <tr>
-    <td ><img src="indexthing/you1.jpg"/></td>
-    <td ><img src="indexthing/info.jpg"/></td> 
+    <th class="th" colspan="4" style="background-color:#DBDBDB; color:black;">高級育成高級中學學生資料</th>   
 </tr>
-<tr style="text-align:left;">
-<td style="color:white;">狀態:<b id="statname" style="color:lightgreen;"><script src="playerStat.js"></script></b></td>
+<tr  style="height:80px">
+    <th class="th">玩家</th>
+    <td  class="td">you</td>
+    <td  rowspan="9" colspan="2" style="padding:0; max-width:0;max-height:0;">
+        <img style="
+        border:1px solid gray;
+        width:100%;
+        height:100%;
+        max-width:298.58px;
+        max-height:427.78px;
+        "src="indexthing/you.jpg"/>   
+    </td>
+</tr>
+<tr>
+    <th class="th">班級</th>
+    <td  class="td">1年D班</td>
+</tr>
+<tr>
+    <th class="th">學號</th>
+    <td  class="td">S01T004721</td>
+    
+</tr>
+<tr>
+    <th class="th">社團</th>
+    <td  class="td">無</td>
+</tr>
+<tr>
+    <th class="th">生日</th>
+    <td  class="td">1月23日</td>
+    
+</tr>
+
+<tr>
+    <th class="th" colspan="2"></th>
+</tr>
+<tr>
+    
+    <th class="th">學力</th>
+    <td class="td" id="arcade"><script src="playerStat.js"></script></td>
+   
+   
+</tr>
+<tr>
+    <th class="th">身體能力</th>
+    <td class="td" id="body"><script src="playerStat.js"></script></td>
+    
+    
+</tr>
+<tr>
+    <th class="th">思考力</th>
+    <td class="td" id="thinck"><script src="playerStat.js"></script></td>
+   
+</tr>
+<tr>
+    <th class="th">團體合作力</td>
+    <td class="td" id="social"><script src="playerStat.js"></script></td>
+     <th class="th">Pr</th>
+    <td class="td" id="coco"><script src="playerStat.js"></script></td>
+</tr>
+<tr>
+    <th class="th">朋友</th>
+    <td class="td" id="friends"><script src="playerStat.js"></script></td>
+
+    <th class="th">體力</th>
+    <td class="td" id="power"><script src="playerStat.js"></script></td>
 </tr>
 </table>
 </div>
@@ -199,60 +280,64 @@ git push -f origin main   更新  -f 是強制更新
     </div>
     </div>
 </div>
+</div><!-- 目錄 櫛田 -->
 
 
 
 
 
-
-
-
-
-
-
-
-
+<div id="goindex1" style="display:none; ">
 <div class="alldivuse">
 <h3 style="color:white; font-weight:bold; font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
-you
-</h3>
+物品欄:</h3>
 <table id="table1">
-<tr id="tr2">
-    <td>學力:</td>
-    <td id="arcade"><script src="playerStat.js"></script></td>
-   
 
-     <td>Pr:</td>
-    <td id="coco"><script src="playerStat.js"></script></td>
+<tr >
+    <th class="th">飲食</th>
+    <th class="th">學習</th>
+    <th class="th">暗器</th>
+    <th class="th">差事任務</th>
 </tr>
-<tr id="tr1">
-    <td>身體能力:</td>
-    <td id="body"><script src="playerStat.js"></script></td>
-    
-    <td>體力:</td>
-    <td id="power"><script src="playerStat.js"></script></td>
+<tr>
+    <td class="td">炒麵麵包 X <b id="item00"><script src="playerStat.js"></script></b></td>
+    <td class="td"></td>
+    <td class="td"></td>
+    <td class="td">山內的聯絡方式 X <b id="item01"><script src="playerStat.js"></script></b></td>
 </tr>
-<tr id="tr2">
-    <td>思考力:</td>
-    <td id="thinck"><script src="playerStat.js"></script></td>
-    
-    <td>朋友:</td>
-    <td id="friends"><script src="playerStat.js"></script></td>
+<tr >
+    <td class="td"></td>
+    <td class="td"></td>
+    <td class="td"></td>
+    <td class="td"></td>
 </tr>
-<tr id="tr1">
-    <td>團體合作力:</td>
-    <td id="social"><script src="playerStat.js"></script></td>
-   
-    <td>身材Lv:</td>
-    <td id="boingboing"><script src="playerStat.js"></script></td>
-</tr>
+
 </table>
 </div>
 
 
 
+
+
+</div><!-- 目錄 物品 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div style="
-    margin-bottom:1%;
     padding:2%;
     text-align:center;
     font-weight:bold;
@@ -260,11 +345,10 @@ you
     color:lightgray;
     font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     ">
-am 製作 版本 v<b>1.0.1</b>
+版本 v<b>1.0.1</b><p>
+am 製作,此角色來自 歡迎來到實力至上主義教室 作品,本站內容涉及劇透 請斟酌閱覽.
+</p>
 </div>
-
-
-
-</div>
+</div><!-- 109 的縮排-->
 </body>
 </html>
