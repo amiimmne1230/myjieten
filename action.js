@@ -61,6 +61,7 @@ function disallbutppn(ass,ass2)
 		doload(aasdasd);
 		if(needcd <= 0)
 		{
+			actionload.style.backgroundColor =	"lightgreen";
 			if(ass2 == 0)
 				{clearInterval(intervalID);
 					var a = iii(1,3);

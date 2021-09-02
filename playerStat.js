@@ -18,7 +18,7 @@ var		item = [
 //物品
 
 
-var		stat =	document.getElementById("statname");//設定狀態
+var	stat =	document.getElementById("statname");//設定狀態
 
 
 var		playerstat= ["活著","活著(黑化)","亡矣"];

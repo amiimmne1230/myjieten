@@ -11,4 +11,5 @@ function doload(ass)
 function overload()
 {	a = 0 ;
 	actionload.style.width = "0%";
+	actionload.style.backgroundColor =	"white";
 }
