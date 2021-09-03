@@ -6,17 +6,8 @@ var		maxpower=30;//最大體
 var		soci=12;////團體合作
 var		frien=0;//朋友
 var		cococo=50;//PR
-
-
-var		item = [
-0,//炒麵麵包 0
-0, //山內同學的聯絡方式 1
-0,//歷年考試卷 2
-0//原規 3
-]
-//物品
-
-
+var		hp=40;//生命
+var		maxhp=40;//最大生命
 
 
 
@@ -36,11 +27,9 @@ var state0 = document.getElementById("arcade"),
 	state5 = document.getElementById("social"),
 	state6 = document.getElementById("friends"),
 	state7 = document.getElementById("coco"),
+	state8 = document.getElementById("hp")
 
-	item00 = document.getElementById("item00"),
-	item01 = document.getElementById("item01"),
-	item02 = document.getElementById("item02"),
-	item03 = document.getElementById("item03")
+	
 	;
 	//必須依各個設定
 	
@@ -77,12 +66,16 @@ function startallset()
 		if(state7 != null)
 			state7.innerHTML = cococo;
 		
+		if(state8 != null)
+			state8.innerHTML = hp +"/" + maxhp;
+
+
 
 
 		if(stat != null)
 			stat.innerHTML = playerstat[0];//一開始活者?
 
-
+			/*
 
 		if(item00 != null)
 			item00.innerHTML = item[0];
@@ -95,7 +88,7 @@ function startallset()
 
 		if(item03 != null)
 			item03.innerHTML = item[3];
-
+			*/
 
 
 }//一開始設定

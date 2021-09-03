@@ -75,6 +75,7 @@ function disallbutppn(ass,ass2)
 				case 0:
 					var a = iii(1,3);
 					searchhtml.innerHTML = '自習完成 得到 ' + a + ' 點學力  體力消耗 ' +  2 + ' 點';				
+					$arca += a;
 					arca+=a;
 					state0.innerHTML = arca;
 					powerevent(-2);
